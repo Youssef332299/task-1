@@ -1,0 +1,46 @@
+void main()
+{
+  int grade = 80;
+  int counterA=0;
+  int counterB=0;
+  int counterC=0;
+  int counterD=0;
+  int counterF=0;
+  
+List<int>studentsGrades=[49,8,50,99,84,77,65,61,5,88,89,7,53,83,69];
+
+  for(int i = 0; i < 15; i++)
+  {
+    if(studentsGrades[i]>=85)
+       {
+          counterA++;
+       }
+    else if(studentsGrades[i]>=75)
+       {
+          counterB++;
+       }
+    else if(studentsGrades[i]>=65)
+       {
+          counterC++;
+       }
+    else if(studentsGrades[i]>=50)
+       {
+          counterD++;
+       }
+    else
+       {
+          counterF++;
+       }
+  }   
+  
+  double StudentSuccess = (counterA+counterB+counterC+counterD) * 100 / 15; 
+  double studentFailure = (counterF * 100) / 15;
+  print("The number of students who got an [A] grade is  [$counterA]");
+  print("The number of students who got an [B] grade is  [$counterB]");
+  print("The number of students who got an [C] grade is  [$counterC]");
+  print("The number of students who got an [D] grade is  [$counterD]");
+  print("The number of students who got an [F] grade is  [$counterF]");
+  print("___________________________________________________________");
+  print("Student success rate [${StudentSuccess.floor()}%]" );
+  print("Student failure rate [${studentFailure.floor()}%]" );
+}
